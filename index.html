@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EXERCISE APP</title>
+</head>
+<body>
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Website Header -->
+    <header>
+        <div class="heading">
+            <h1>EXERCISE GUIDE</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <!-- Exercise / Muscle / Difficulty Cards -->
+            <div class="exercise-muscle-difficulties">
+                <h1>Exercise-Types</h1>
+                <div class="exercise-types">
+                    <!-- Added onclick attribute to make cards clickable -->
+                    <div class="all-exercise" onclick="fillInput('exercies','Cardio')">Cardio</div>
+                    <div class="all-exercise" onclick="fillInput('exercies','Olympic_WeightLifting')">Olympic_WeightLifting</div>
+                    <div class="all-exercise" onclick="fillInput('exercies','Power-Lifting')">Power-Lifting</div>
+                    <div class="all-exercise" onclick="fillInput('exercies','Strength')">Strength</div>
+                    <div class="all-exercise" onclick="fillInput('exercies','Stretching')">Stretching</div>
+                    <div class="all-exercise" onclick="fillInput('exercies','Strongman')">Strongman</div>
+                </div>
+        
+                <h1>Muscle-Types</h1>
+                <div class="muscle-types">
+                    <div class="all-muscle" onclick="fillInput('muscle','Abdominals')">Abdominals</div>
+                    <div class="all-muscle" onclick="fillInput('muscle','Biceps')">Biceps</div>
+                    <div class="all-muscle" onclick="fillInput('muscle','Chest')">Chest</div>
+                    <div class="all-muscle" onclick="fillInput('muscle','Glutes')">Glutes</div>
+                    <div class="all-muscle" onclick="fillInput('muscle','Hamstrings')">Hamstrings</div>
+                    <div class="all-muscle" onclick="fillInput('muscle','Triceps')">Triceps</div>
+                    <!-- (You can add onclick to all muscle cards the same way) -->
+                </div>
+                
+                <h1>Types OF Difficulties</h1>
+                <div class="difficulties-types">
+                    <div class="all-difficulties" onclick="fillInput('difficulty','Beginner')">Beginner</div>
+                    <div class="all-difficulties" onclick="fillInput('difficulty','Intermediate')">Intermediate</div>
+                    <div class="all-difficulties" onclick="fillInput('difficulty','Expert')">Expert</div>
+                </div>
+            </div>
+            
+            <!-- API Input and Results -->
+            <div class="Exercies-API-Block">
+                <h1>Enter Your Required Exercise</h1>
+                <div class="all-inputs">
+                    <div class="exercies-input">
+                        <input type="text" id="exercies" placeholder="Enter Exercise Type....">
+                    </div>
+                    <div class="muscle-input">
+                        <input type="text" id="muscle" placeholder="Enter Muscle Type....">
+                    </div>
+                    <div class="difficulty-input">
+                        <input type="text" id="difficulty" placeholder="Enter Difficulty Level....">
+                    </div>
+                </div>
+                <button onclick="showExercies()">EXERCISES</button>
+                <br>
+                <div id="Exercises"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
